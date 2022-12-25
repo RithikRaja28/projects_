@@ -1,0 +1,117 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<stdlib.h>
+//Online Ticket Reservation done by RithikRaja S
+ int main(){
+     int a,train,seat,d,m,y;
+     float fare;
+     char s[20];
+     char gender[10];
+     char namestart[50];
+     char desti[50];
+     
+     printf("\t......Welcome!......\n");
+     
+printf ("\n-->Enter date and month of journey:");
+  
+ 
+scanf ("%d %d %d", &d, &m, &y);
+  
+ 
+printf ("\n...Date of Jouney: %d/%d/%d\n..Passengers:", d, m, y);
+     scanf(" %d",&a);
+      printf("--->The number of the passengers are: %d\n\n",a);
+      fare = a*550;
+     for(int i=1;i<=a;i++){
+         
+         printf("--->Enter the name of the passengers:");
+         scanf(" %s",s);                                           //Collecting passengers name and their gender.
+     }
+     for(int j=0;j<a;j++){
+             printf("--->Gender of passengers:");
+             scanf(" %s",gender);
+             
+         }
+         printf("\n");
+    printf("--->Enter Your Arrival point:");
+    scanf(" %s",namestart);
+         printf("\n");
+    printf("--->Enter Your Destination point:");
+    scanf(" %s",desti);
+    printf("\n");
+     printf("\t\tThe Following Trains "
+           "Are Available.....\n");
+           printf("\t\t1. RAJDHANI Express.."
+           ".......10:00 "
+           "a.m Station\n");
+    printf("\t\t2. VAIGAI Express..."
+           ".......05:00 "
+           "p.m Station\n");                                //Representing Various trains
+    printf("\t\t3. KANYAKUMMARI Express..."
+           ".......11:00 "
+           "p.m"
+           " Station\n");
+    printf("\t\t4. CHENNAI Express"
+           ".........05:00 "
+           "p.m Station\n");
+    printf("\t\t5. YERCAUD Express..."
+           ".........07:00 "
+           "a.m Station\n");
+    printf("\n");
+           printf("....Select the Train....");
+           scanf("%d",&train);                             //Information for each train routes
+     switch (train) {
+         case 1: 
+            printf("\n");
+             printf("\t-->RAJDHANI Express:");
+             printf("\n");
+             printf("\t\t10:00 a.m\n");
+             printf("Be on station before Train depatures.");
+             printf("Enter the number of seats:");
+             scanf(" %d",&seat);
+             break;
+        case 2:
+            printf("\n");
+             printf("\t-->VAIGAI Express:");
+             printf("\n");
+             printf("\t\t05:00 p.m\n");
+             printf("Be on station before Train depatures.\n");
+             printf("Enter the number of seats:");
+             scanf(" %d",&seat);
+             break;
+        case 3:
+            printf("\n");
+             printf("\t-->KANYAKUMMARI Express:");
+             printf("\n");
+             printf("\t\t11:00 p.m\n");
+             printf("Be on station before Train depatures.\n");
+             printf("Enter the number of seats:");
+             scanf(" %d",&seat);
+             break;
+        case 4:
+            printf("\n");
+             printf("\t-->CHENNAI Express:");
+             printf("\n");
+             printf("\t\t05:00 p.m\n");
+             printf("Be on station before Train depatures.\n");
+             printf("Enter the number of seats:");
+             scanf(" %d",&seat);
+             break;
+        case 5:
+           printf("\n");
+             printf("\t-->YERCAUD Express:");
+             printf("\n");
+             printf("\t\t07:00 a.m\n");
+             printf("Be on station before Train depatures.\n");
+             printf("Enter the number of seats:");
+             scanf(" %d",&seat);
+             break;
+         default :
+            printf("\nTrain Not Available. Sorry for inconvience");
+     }
+     printf("\n\n");                                              //Total fare display.
+      printf("\t....Total fare for your Journey: %.3f",fare);
+
+     return 0;
+}
